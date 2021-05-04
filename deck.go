@@ -39,10 +39,16 @@ func newDeck() deck {
 
 /*
  * Multiple return values function
+ * we didn't create a func (d deck) deal(...){} because we would called
+ * cards.deal(5) which would let us think that cards would be modified.
  */
 func deal(d deck, handSize int) (deck, deck) {
 	return d[:handSize], d[handSize:]
 }
+
+/*
+ * (d deck) object will be modified
+ */
 
 func (d deck) toString() string {
 	return strings.Join([]string(d), ", ")
