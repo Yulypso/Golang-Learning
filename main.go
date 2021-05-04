@@ -9,7 +9,6 @@ func main() {
 
 	hand.print()
 	remaining.print()
-
-	d := "hi there"
-	fmt.Println([]byte(d)) // to cast into byte slice
+	println("--")
+	fmt.Println(cards.toString())
 }
