@@ -19,6 +19,23 @@ $ go run main.go deck.go
 $ go test -v
 ```
 
+## Map
+```bash
+$ cd Map
+
+# Run Code
+$ go run main.go 
+```
+
+## Struct
+```bash
+$ cd Struct
+
+# Run Code
+$ go run main.go 
+```
+
+
 ---
 
 <br/>
