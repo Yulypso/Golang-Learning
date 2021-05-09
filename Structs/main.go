@@ -2,23 +2,24 @@ package main
 
 import "fmt"
 
-type contactInfo struct {
-	email   string
-	zipCode int
+type ContactInfo struct {
+	Email   string
+	ZipCode int
 }
 
-type person struct {
-	firstName string
-	lastName  string
-	contactInfo
+type Person struct {
+	FirstName string
+	LastName  string
+	ContactInfo
 }
 
 func main() {
-	thierry := person{
-		firstName: "Thierry", lastName: "Khamphousone",
-		contactInfo: contactInfo{
-			email:   "khamphousone.thierry@outlook.fr",
-			zipCode: 94200,
+	thierry := Person{
+		FirstName: "Thierry",
+		LastName:  "Khamphousone",
+		ContactInfo: ContactInfo{
+			Email:   "khamphousone.thierry@outlook.fr",
+			ZipCode: 94200,
 		},
 	}
 	thierry.print()
@@ -31,10 +32,10 @@ func main() {
 	thierry.print()
 }
 
-func (p person) print() {
+func (p Person) print() {
 	fmt.Printf("%+v\n", p)
 }
 
-func (p *person) updateFirstName(firstName string) {
-	(*p).firstName = firstName
+func (p *Person) updateFirstName(firstName string) {
+	(*p).FirstName = firstName
 }
